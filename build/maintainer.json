@@ -741,6 +741,9 @@
     "/bangumi/tv/user/blog/:id": [
         "nczitzk"
     ],
+    "/bangumi/tv/user/wish/:id": [
+        "honue"
+    ],
     "/banyuetan/:name": [],
     "/banyuetan/byt/:time?": [],
     "/baozimh/comic/:name": [
@@ -1078,7 +1081,12 @@
     "/btzj/:category?": [
         "nczitzk"
     ],
-    "/buaa/news/:type": [],
+    "/buaa/news/:type": [
+        "AlanDecode"
+    ],
+    "/buaa/sme/:path*": [
+        "MeanZhang"
+    ],
     "/buaq": [],
     "/bugly/changelog/:platform": [],
     "/bupt/funbox": [],
@@ -1275,6 +1283,9 @@
     "/cell/cell/:category": [],
     "/cell/cover": [],
     "/centbrowser/history": [],
+    "/cfachina/servicesupport/analygarden/:program?": [
+        "TonyRL"
+    ],
     "/cfan/news": [],
     "/cfd/gbp_div": [],
     "/cgtn/most/:type?/:time?": [],
@@ -1428,6 +1439,9 @@
     ],
     "/cna/:id?": [
         "nczitzk"
+    ],
+    "/cna/web/:id?": [
+        "dzx-dzx"
     ],
     "/cnbc/rss/:id?": [
         "TonyRL"
@@ -2228,7 +2242,9 @@
         "nczitzk"
     ],
     "/egameqq/room/:id": [],
-    "/egsea/flash": [],
+    "/egsea/flash": [
+        "hillerliao"
+    ],
     "/ehentai/favorites/:favcat?/:order?/:page?/:routeParams?": [
         "yindaheng98",
         "syrinka"
@@ -2967,7 +2983,7 @@
     "/gov/news/:uid": [
         "EsuRt"
     ],
-    "/gov/nifdc/:path+": [
+    "/gov/nifdc/:path?": [
         "nczitzk"
     ],
     "/gov/nmpa/:path+": [
@@ -3111,6 +3127,9 @@
     ],
     "/greasyfork/scripts/:script/versions": [
         "miles170"
+    ],
+    "/greasyfork/scripts/sort/:sort/:language?": [
+        "ingjieye"
     ],
     "/grist": [
         "Rjnishant530"
@@ -3563,24 +3582,39 @@
         "shengmaosu"
     ],
     "/huxiu/article": [
-        "HenryQW"
+        "HenryQW",
+        "nczitzk"
     ],
-    "/huxiu/author/:id": [
-        "HenryQW"
+    "/huxiu/briefcolumn/:id": [
+        "Fatpandac",
+        "nczitzk"
+    ],
+    "/huxiu/channel/:id?": [
+        "nczitzk"
+    ],
+    "/huxiu/club/:id": [
+        "nczitzk"
     ],
     "/huxiu/collection/:id": [
-        "AlexdanerZe"
+        "AlexdanerZe",
+        "nczitzk"
+    ],
+    "/huxiu/member/:id/:type?": [
+        "HenryQW",
+        "nczitzk"
     ],
     "/huxiu/moment": [
         "nczitzk"
     ],
     "/huxiu/search/:keyword": [
         "xyqfer",
-        "HenryQW"
+        "HenryQW",
+        "nczitzk"
     ],
     "/huxiu/tag/:id": [
         "xyqfer",
-        "HenryQW"
+        "HenryQW",
+        "nczitzk"
     ],
     "/huya/live/:id": [],
     "/hyqss/hyrb/:id?": [
@@ -4705,6 +4739,9 @@
     "/mobilism/portal/:type/:fulltext?": [
         "nitezs"
     ],
+    "/modb/topic/:id": [
+        "yueneiqi"
+    ],
     "/modelscope/community": [
         "TonyRL"
     ],
@@ -5444,8 +5481,9 @@
         "TonyRL"
     ],
     "/pgyer/:app?": [],
-    "/phoronix/:page/:queryOrItem?": [
-        "oppliate"
+    "/phoronix/:category?/:topic?": [
+        "oppliate",
+        "Rongronggg9"
     ],
     "/phrack": [],
     "/pianyuan/index/:media?": [
@@ -7409,8 +7447,9 @@
     "/weibo/oasis/user/:userid": [
         "kt286"
     ],
-    "/weibo/search/hot": [
-        "xyqfer"
+    "/weibo/search/hot/:fulltext?": [
+        "xyqfer",
+        "shinemoon"
     ],
     "/weibo/super_index/:id/:type?/:routeParams?": [
         "zengxs",
