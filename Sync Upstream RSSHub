@@ -1,0 +1,46 @@
+name: Sync Upstream RSSHub
+
+on:
+  # 定时触发：每 6 小时同步一次 (UTC 时间)
+  # 你可以修改 cron 表达式，例如每天凌晨 1 点：0 1 * * *
+  schedule:
+    - cron: '0 */6 * * *'
+  # 允许手动触发：在 Actions 页面点击该 workflow 并运行
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取所有历史记录，防止合并错误
+
+      - name: Set Git User
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add Upstream Remote
+        run: |
+          git remote add upstream https://github.com/DIYgod/RSSHub.git
+          git fetch upstream
+
+      - name: Merge Upstream Changes
+        run: |
+          # 尝试将上游的 master 分支合并到当前分支
+          # 如果你修改过代码，这里可能会产生冲突。
+          # 如果你只是部署使用，未修改源码，通常使用 git merge 即可
+          git checkout master
+          git merge upstream/master --no-edit
+          
+          # 如果上面的 merge 失败（有冲突），你可以选择强制重置（会丢失你的本地修改）
+          # git reset --hard upstream/master
+
+      - name: Push Changes
+        run: |
+          # 使用 GITHUB_TOKEN 推送回当前仓库
+          git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
